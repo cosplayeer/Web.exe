@@ -23,6 +23,10 @@ request= http_request.encode('utf-8')
 print('请求', request)
 s.send(request)
 
+# 接受服务器的响应数据
+# 参数是长度，这里为1023字节
+# 所以如果服务器返回的数据超过1023的部分你就得不到了
+# 1023是魔法数据，随便写的
 response = s.recv(1023)
 
 print('响应', response)
