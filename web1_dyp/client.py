@@ -12,6 +12,7 @@ s.connect((host, port))
 ip, port = s.getsockname()
 print('本机ip 和 port {} {}'.format(ip, port))
 # 本地的端口是操作系統分配的，本地的ip是路由器分配的
+# 本机ip 和 port 10.64.106.222 10692
 
 #构造一个HTTP请求
 http_request = 'GET / HTTP/1.1\r\nhost:{}\r\n\r\n'.format(host)
@@ -32,3 +33,8 @@ response = s.recv(1023)
 print('响应', response)
 # str format
 print('响应的str格式', response.decode('utf-8'))
+
+#响应行
+# http头
+# 空格行
+#http数据 ：html文件
