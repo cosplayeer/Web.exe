@@ -10,8 +10,6 @@ s.bind((host, port))
 while True:
     s.listen(5)
     connection, address = s.accept()
-    print(type(connection))
-
 
     request = connection.recv(1024)
     print('ip and request, {}\n{}'.format(address, request.decode('utf-8')))
