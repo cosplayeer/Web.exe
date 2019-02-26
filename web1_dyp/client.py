@@ -11,6 +11,7 @@ s.connect((host, port))
 
 ip, port = s.getsockname()
 print('本机ip 和 port {} {}'.format(ip, port))
+# 本地的端口是操作系統分配的，本地的ip是路由器分配的
 
 http_request = 'GET / HTTP/1.1\r\nhost:{}\r\n\r\n'.format(host)
 
